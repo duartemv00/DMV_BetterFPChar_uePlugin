@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-BetterFirstPersonCharacter.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Duarte\Desktop\FPTemplate\Intermediate\Build\Win64\x64\FPTemplateEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.obj"
+"C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\BetterFirstPersonCharacter.cpp.obj"
+"C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\Default.rc2.res"
+/OUT:"C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\UnrealEditor-BetterFirstPersonCharacter.lib"
