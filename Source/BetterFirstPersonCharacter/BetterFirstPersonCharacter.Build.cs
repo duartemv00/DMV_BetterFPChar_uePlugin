@@ -37,7 +37,7 @@ public class BetterFirstPersonCharacter : ModuleRules
 				"CoreUObject",
 				"Engine",
 				"Slate",
-				"SlateCore",
+				"SlateCore", "EnhancedInput", "EnhancedInput",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

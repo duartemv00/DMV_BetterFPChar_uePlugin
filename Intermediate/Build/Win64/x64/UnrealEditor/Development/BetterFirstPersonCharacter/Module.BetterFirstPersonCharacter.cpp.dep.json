@@ -1,0 +1,31 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\betterfirstpersoncharacter\\module.betterfirstpersoncharacter.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\duarte\\desktop\\fptemplate\\intermediate\\build\\win64\\x64\\fptemplateeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\betterfirstpersoncharacter\\definitions.betterfirstpersoncharacter.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\betterfirstpersoncharacter.init.gen.cpp",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\bfpcharacter.gen.cpp",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\source\\betterfirstpersoncharacter\\public\\character\\bfpcharacter.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\bfpcharacter.generated.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\bfpplayercharacter.gen.cpp",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\source\\betterfirstpersoncharacter\\public\\character\\bfpplayercharacter.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\bfpplayercharacter.generated.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\bfpplayercontroller.gen.cpp",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\source\\betterfirstpersoncharacter\\public\\player\\bfpplayercontroller.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\bfpplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

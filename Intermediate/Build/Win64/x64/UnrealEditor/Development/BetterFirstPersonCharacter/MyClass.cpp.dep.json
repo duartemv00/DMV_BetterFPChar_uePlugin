@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\source\\betterfirstpersoncharacter\\private\\player\\myclass.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\duarte\\desktop\\fptemplate\\intermediate\\build\\win64\\x64\\fptemplateeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\betterfirstpersoncharacter\\definitions.betterfirstpersoncharacter.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\source\\betterfirstpersoncharacter\\private\\player\\myclass.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\myclass.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

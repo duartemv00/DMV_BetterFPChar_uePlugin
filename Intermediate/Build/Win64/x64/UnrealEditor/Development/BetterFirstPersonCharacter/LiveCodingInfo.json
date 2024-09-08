@@ -1,5 +1,15 @@
 {
 	"RemapUnityFiles": 
 	{
+		"Module.BetterFirstPersonCharacter.cpp.obj": [
+			"BetterFirstPersonCharacter.init.gen.cpp.obj",
+			"BFPCharacter.gen.cpp.obj",
+			"BFPPlayerCharacter.gen.cpp.obj",
+			"BFPPlayerController.gen.cpp.obj",
+			"BetterFirstPersonCharacter.cpp.obj",
+			"BFPCharacter.cpp.obj",
+			"BFPPlayerCharacter.cpp.obj",
+			"BFPPlayerController.cpp.obj"
+		]
 	}
 }
