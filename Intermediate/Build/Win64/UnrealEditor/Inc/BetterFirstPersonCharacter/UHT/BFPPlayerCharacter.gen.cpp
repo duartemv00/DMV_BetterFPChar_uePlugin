@@ -13,7 +13,9 @@ void EmptyLinkFunctionForGeneratedCodeBFPPlayerCharacter() {}
 BETTERFIRSTPERSONCHARACTER_API UClass* Z_Construct_UClass_ABFPCharacter();
 BETTERFIRSTPERSONCHARACTER_API UClass* Z_Construct_UClass_ABFPPlayerCharacter();
 BETTERFIRSTPERSONCHARACTER_API UClass* Z_Construct_UClass_ABFPPlayerCharacter_NoRegister();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UCameraShakeBase_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpotLightComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
@@ -156,6 +158,18 @@ struct Z_Construct_UClass_ABFPPlayerCharacter_Statics
 		{ "Category", "Player features" },
 		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IDLECameraShake_MetaData[] = {
+		{ "Category", "Player features" },
+		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WalkCameraShake_MetaData[] = {
+		{ "Category", "Player features" },
+		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SprintCameraShake_MetaData[] = {
+		{ "Category", "Player features" },
+		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bUseHeadBobbing_MetaData[] = {
 		{ "Category", "Player features" },
 		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
@@ -248,6 +262,9 @@ struct Z_Construct_UClass_ABFPPlayerCharacter_Statics
 #endif // WITH_METADATA
 	static void NewProp_bChangeFocus_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bChangeFocus;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_IDLECameraShake;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_WalkCameraShake;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_SprintCameraShake;
 	static void NewProp_bUseHeadBobbing_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseHeadBobbing;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FirstPersonCameraComponent;
@@ -276,6 +293,9 @@ void Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_bChangeFocus_SetBit
 	((ABFPPlayerCharacter*)Obj)->bChangeFocus = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_bChangeFocus = { "bChangeFocus", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABFPPlayerCharacter), &Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_bChangeFocus_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bChangeFocus_MetaData), NewProp_bChangeFocus_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_IDLECameraShake = { "IDLECameraShake", nullptr, (EPropertyFlags)0x0024080000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, IDLECameraShake), Z_Construct_UClass_UClass, Z_Construct_UClass_UCameraShakeBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IDLECameraShake_MetaData), NewProp_IDLECameraShake_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_WalkCameraShake = { "WalkCameraShake", nullptr, (EPropertyFlags)0x0024080000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, WalkCameraShake), Z_Construct_UClass_UClass, Z_Construct_UClass_UCameraShakeBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WalkCameraShake_MetaData), NewProp_WalkCameraShake_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_SprintCameraShake = { "SprintCameraShake", nullptr, (EPropertyFlags)0x0024080000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, SprintCameraShake), Z_Construct_UClass_UClass, Z_Construct_UClass_UCameraShakeBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SprintCameraShake_MetaData), NewProp_SprintCameraShake_MetaData) };
 void Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_bUseHeadBobbing_SetBit(void* Obj)
 {
 	((ABFPPlayerCharacter*)Obj)->bUseHeadBobbing = 1;
@@ -291,6 +311,9 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerChar
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_FlashlightAction = { "FlashlightAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, FlashlightAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FlashlightAction_MetaData), NewProp_FlashlightAction_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABFPPlayerCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_bChangeFocus,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_IDLECameraShake,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_WalkCameraShake,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_SprintCameraShake,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_bUseHeadBobbing,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_FirstPersonCameraComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_FlashlightSpringArm,
@@ -342,10 +365,10 @@ ABFPPlayerCharacter::~ABFPPlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_Duarte_Desktop_FPTemplate_Plugins_BetterFirstPersonCharacter_Source_BetterFirstPersonCharacter_Public_Character_BFPPlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABFPPlayerCharacter, ABFPPlayerCharacter::StaticClass, TEXT("ABFPPlayerCharacter"), &Z_Registration_Info_UClass_ABFPPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABFPPlayerCharacter), 3500958776U) },
+		{ Z_Construct_UClass_ABFPPlayerCharacter, ABFPPlayerCharacter::StaticClass, TEXT("ABFPPlayerCharacter"), &Z_Registration_Info_UClass_ABFPPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABFPPlayerCharacter), 929227634U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Duarte_Desktop_FPTemplate_Plugins_BetterFirstPersonCharacter_Source_BetterFirstPersonCharacter_Public_Character_BFPPlayerCharacter_h_607376094(TEXT("/Script/BetterFirstPersonCharacter"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Duarte_Desktop_FPTemplate_Plugins_BetterFirstPersonCharacter_Source_BetterFirstPersonCharacter_Public_Character_BFPPlayerCharacter_h_421381472(TEXT("/Script/BetterFirstPersonCharacter"),
 	Z_CompiledInDeferFile_FID_Users_Duarte_Desktop_FPTemplate_Plugins_BetterFirstPersonCharacter_Source_BetterFirstPersonCharacter_Public_Character_BFPPlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Duarte_Desktop_FPTemplate_Plugins_BetterFirstPersonCharacter_Source_BetterFirstPersonCharacter_Public_Character_BFPPlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

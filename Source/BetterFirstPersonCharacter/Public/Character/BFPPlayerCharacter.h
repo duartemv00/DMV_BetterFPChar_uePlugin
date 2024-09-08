@@ -47,6 +47,12 @@ protected:
 	void ChangeFocus();
 
 	UPROPERTY(EditDefaultsOnly, Category = "Player features")
+	TSubclassOf<UCameraShakeBase> IDLECameraShake;
+	UPROPERTY(EditDefaultsOnly, Category = "Player features")
+	TSubclassOf<UCameraShakeBase> WalkCameraShake;
+	UPROPERTY(EditDefaultsOnly, Category = "Player features")
+	TSubclassOf<UCameraShakeBase> SprintCameraShake;
+	UPROPERTY(EditDefaultsOnly, Category = "Player features")
 	bool bUseHeadBobbing = false;
 	UFUNCTION()
 	void InitializeHeadBoobing();

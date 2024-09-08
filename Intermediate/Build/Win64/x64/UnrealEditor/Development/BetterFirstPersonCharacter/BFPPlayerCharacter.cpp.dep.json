@@ -69,7 +69,9 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\source\\betterfirstpersoncharacter\\public\\player\\bfpplayercontroller.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\bfpplayercontroller.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -11,6 +11,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Player/BFPPlayerController.h"
 
 ABFPPlayerCharacter::ABFPPlayerCharacter()
 {
@@ -97,6 +98,32 @@ void ABFPPlayerCharacter::ChangeFocus()
 
 void ABFPPlayerCharacter::InitializeHeadBoobing()
 {
+	float CurrentVelocity = UKismetMathLibrary::VSize(GetVelocity());
+	if(!Cast<ABFPPlayerController>(GetController())) { return; }
+	ABFPPlayerController* ControllerRef = Cast<ABFPPlayerController>(GetController());
+	if(CurrentVelocity > 0.0f && CanJump())
+	{
+		if(CurrentVelocity <= 400.f) {
+			// WALK
+			if(IsValid(WalkCameraShake)) {
+				ControllerRef->ClientStartCameraShake(
+				WalkCameraShake, 1.0f, ECameraShakePlaySpace::CameraLocal, FRotator::ZeroRotator);
+			}
+		} else {
+			// SPRINT
+			if(IsValid(SprintCameraShake))
+			{
+				ControllerRef->ClientStartCameraShake(
+				SprintCameraShake, 1.0f, ECameraShakePlaySpace::CameraLocal, FRotator::ZeroRotator);
+			}
+		}
+	} else {
+		// IDLE
+		if(IsValid(IDLECameraShake)) {
+			ControllerRef->ClientStartCameraShake(
+			IDLECameraShake, 1.0f, ECameraShakePlaySpace::CameraLocal, FRotator::ZeroRotator);
+		}
+	}
 }
 
 void ABFPPlayerCharacter::BeginPlay()
@@ -111,6 +138,7 @@ void ABFPPlayerCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	if(bChangeFocus){ ChangeFocus(); }
+	if(bUseHeadBobbing){ InitializeHeadBoobing(); }
 }
 
 void ABFPPlayerCharacter::Move(const FInputActionValue& Value)
