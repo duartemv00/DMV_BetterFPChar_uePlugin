@@ -33,6 +33,10 @@ ABFPPlayerCharacter::ABFPPlayerCharacter()
 	FlashlightSpringArm->SetupAttachment(GetCapsuleComponent());
 	FlashlightSpotLight = CreateDefaultSubobject<USpotLightComponent>(TEXT("FlashlightSpotLight"));
 	FlashlightSpotLight->SetupAttachment(FlashlightSpringArm);
+	FlashlightSpringArm->TargetArmLength = 0.0f;
+	FlashlightSpringArm->bUsePawnControlRotation = true;
+	FlashlightSpringArm->SetWorldLocation(FVector(0.0f, 20.0f, 40.0f));
+	FlashlightSpringArm->bEnableCameraRotationLag = true;
 }
 
 void ABFPPlayerCharacter::ToggleFlashlight(const FInputActionValue& Value)
@@ -131,6 +135,7 @@ void ABFPPlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	CurrentPlayerState = EPlayerState::Idle;
+	FlashlightSpringArm->SetVisibility(false, true);
 }
 
 void ABFPPlayerCharacter::Tick(float DeltaTime)
