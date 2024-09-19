@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\source\\betterfirstpersoncharacter\\private\\player\\bfpplayercontroller.cpp",
+        "Source": "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\source\\betterfirstpersoncharacter\\private\\player\\bfpplayercontroller.cpp",
         "ProvidedModule": "",
         "PCH": "c:\\users\\duarte\\desktop\\fptemplate\\intermediate\\build\\win64\\x64\\fptemplateeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\betterfirstpersoncharacter\\definitions.betterfirstpersoncharacter.h",
-            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\source\\betterfirstpersoncharacter\\public\\player\\bfpplayercontroller.h",
-            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\bfpplayercontroller.generated.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\betterfirstpersoncharacter\\definitions.betterfirstpersoncharacter.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\source\\betterfirstpersoncharacter\\public\\player\\bfpplayercontroller.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\bfpplayercontroller.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedinputsubsystems.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedinputsubsysteminterface.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedplayerinput.h",

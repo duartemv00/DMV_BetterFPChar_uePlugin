@@ -1,11 +1,11 @@
-"C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Source\BetterFirstPersonCharacter\Private\BetterFirstPersonCharacter.cpp"
+"C:\Users\Duarte\Desktop\FPTemplate\Plugins\DMV_BetterFPChar_ue5Plugin\Source\BetterFirstPersonCharacter\Private\BetterFirstPersonCharacter.cpp"
 /FI"C:\Users\Duarte\Desktop\FPTemplate\Intermediate\Build\Win64\x64\FPTemplateEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\Definitions.BetterFirstPersonCharacter.h"
+/FI"C:\Users\Duarte\Desktop\FPTemplate\Plugins\DMV_BetterFPChar_ue5Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\Definitions.BetterFirstPersonCharacter.h"
 /Yu"C:\Users\Duarte\Desktop\FPTemplate\Intermediate\Build\Win64\x64\FPTemplateEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
 /Fp"C:\Users\Duarte\Desktop\FPTemplate\Intermediate\Build\Win64\x64\FPTemplateEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\BetterFirstPersonCharacter.cpp.obj"
-/sourceDependencies "C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\BetterFirstPersonCharacter.cpp.dep.json"
-@"C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\BetterFirstPersonCharacter.Shared.rsp"
+/Fo"C:\Users\Duarte\Desktop\FPTemplate\Plugins\DMV_BetterFPChar_ue5Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\BetterFirstPersonCharacter.cpp.obj"
+/sourceDependencies "C:\Users\Duarte\Desktop\FPTemplate\Plugins\DMV_BetterFPChar_ue5Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\BetterFirstPersonCharacter.cpp.dep.json"
+@"C:\Users\Duarte\Desktop\FPTemplate\Plugins\DMV_BetterFPChar_ue5Plugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\BetterFirstPersonCharacter\BetterFirstPersonCharacter.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

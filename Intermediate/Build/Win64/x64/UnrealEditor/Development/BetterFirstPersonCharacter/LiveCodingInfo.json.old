@@ -6,12 +6,10 @@
 			"BFPCharacter.gen.cpp.obj",
 			"BFPPlayerCharacter.gen.cpp.obj",
 			"BFPPlayerController.gen.cpp.obj",
-			"MyClass.gen.cpp.obj",
 			"BetterFirstPersonCharacter.cpp.obj",
 			"BFPCharacter.cpp.obj",
 			"BFPPlayerCharacter.cpp.obj",
-			"BFPPlayerController.cpp.obj",
-			"MyClass.cpp.obj"
+			"BFPPlayerController.cpp.obj"
 		]
 	}
 }

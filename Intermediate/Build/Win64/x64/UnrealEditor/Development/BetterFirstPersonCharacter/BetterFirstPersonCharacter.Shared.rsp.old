@@ -282,6 +282,10 @@
 /I "Editor\SceneDepthPickerMode\Public"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationEditMode\UHT"
 /I "Editor\AnimationEditMode\Public"
+/I "..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT"
+/I "..\Plugins\EnhancedInput\Source"
+/I "..\Plugins\EnhancedInput\Source\EnhancedInput\Public"
+/I "C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BetterFirstPersonCharacter\UHT"
 /I "C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Source"
 /I "C:\Users\Duarte\Desktop\FPTemplate\Plugins\BetterFirstPersonCharacter\Source\BetterFirstPersonCharacter\Public"
 /external:W0

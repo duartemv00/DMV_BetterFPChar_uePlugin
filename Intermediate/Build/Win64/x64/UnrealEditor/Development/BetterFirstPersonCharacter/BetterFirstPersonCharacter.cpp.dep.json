@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\source\\betterfirstpersoncharacter\\private\\betterfirstpersoncharacter.cpp",
+        "Source": "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\source\\betterfirstpersoncharacter\\private\\betterfirstpersoncharacter.cpp",
         "ProvidedModule": "",
         "PCH": "c:\\users\\duarte\\desktop\\fptemplate\\intermediate\\build\\win64\\x64\\fptemplateeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\betterfirstpersoncharacter\\definitions.betterfirstpersoncharacter.h",
-            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\betterfirstpersoncharacter\\source\\betterfirstpersoncharacter\\public\\betterfirstpersoncharacter.h"
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\betterfirstpersoncharacter\\definitions.betterfirstpersoncharacter.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\source\\betterfirstpersoncharacter\\public\\betterfirstpersoncharacter.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
