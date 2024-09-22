@@ -38,6 +38,7 @@ public class BetterFirstPersonCharacter : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore", "EnhancedInput", "EnhancedInput",
+				"PhysicsCore"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

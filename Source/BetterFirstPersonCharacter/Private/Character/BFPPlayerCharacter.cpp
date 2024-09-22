@@ -82,7 +82,7 @@ void ABFPPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 void ABFPPlayerCharacter::ChangeFocus()
 {
 	FVector StartPoint = GetFirstPersonCameraComponent()->GetComponentLocation();
-	FVector EndPoint = StartPoint + (GetFirstPersonCameraComponent()->GetForwardVector() * 1000.0f);
+	FVector EndPoint = StartPoint + (GetFirstPersonCameraComponent()->GetForwardVector() * 100000.0f);
 
 	FHitResult HitResult;
 	UKismetSystemLibrary::LineTraceSingle(GetWorld(), StartPoint, EndPoint,
