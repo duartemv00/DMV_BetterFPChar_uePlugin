@@ -110,7 +110,6 @@ void ABFPPlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	CurrentPlayerState = EPlayerState::Idle;
-	FlashlightSpringArm->SetVisibility(false, true);
 }
 
 void ABFPPlayerCharacter::Tick(float DeltaTime)

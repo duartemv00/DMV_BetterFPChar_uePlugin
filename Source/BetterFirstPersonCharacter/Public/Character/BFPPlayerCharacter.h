@@ -56,14 +56,6 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
 
-	bool bFlashLightOn = false;
-
-	// Flashlight
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Flashlight, meta = (AllowPrivateAccess = "true"))
-	USpringArmComponent* FlashlightSpringArm;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Flashlight, meta = (AllowPrivateAccess = "true"))
-	USpotLightComponent* FlashlightSpotLight;
-
 	// BEGIN - Default Input Actions
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "Default Input", meta=(AllowPrivateAccess = "true"))
 	UInputAction* JumpAction; // Jump Input Action
