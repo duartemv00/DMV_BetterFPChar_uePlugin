@@ -20,17 +20,19 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
+	// BEGIN - Flashlight components construction
 	UFUNCTION(BlueprintCallable)
 	bool ConstructFlighlight();
-
 	UFUNCTION()
 	bool AddSpringArm();
-
 	UFUNCTION()
 	bool AddSpotLight();
+	// END - Flashlight components construction
 
+	// BEGIN - Flashlight functionality
 	UFUNCTION(BlueprintCallable)
 	void ToggleFlashlight();
+	// END - Flashlight functionality
 
 private:
 	UPROPERTY()

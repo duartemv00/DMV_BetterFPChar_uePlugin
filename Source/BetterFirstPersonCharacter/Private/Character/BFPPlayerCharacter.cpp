@@ -47,6 +47,12 @@ void ABFPPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		// Sprinting
 		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Triggered, this, &ABFPPlayerCharacter::StartSprint);
 		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &ABFPPlayerCharacter::StopSprint);
+		// Interacting
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &ABFPPlayerCharacter::Interact);
+		// Lean Right
+		EnhancedInputComponent->BindAction(LeanRightAction, ETriggerEvent::Triggered, this, &ABFPPlayerCharacter::LeanRight);
+		// Lean Left
+		EnhancedInputComponent->BindAction(LeanLeftAction, ETriggerEvent::Triggered, this, &ABFPPlayerCharacter::LeanLeft);
 	}
 	else
 	{
@@ -84,24 +90,45 @@ void ABFPPlayerCharacter::InitializeHeadBoobing()
 	{
 		if(CurrentVelocity <= 400.f) {
 			// WALK
-			if(IsValid(WalkCameraShake)) {
+			if(IsValid(HeadBobbingData.WalkCameraShake)) {
 				ControllerRef->ClientStartCameraShake(
-				WalkCameraShake, 1.0f, ECameraShakePlaySpace::CameraLocal, FRotator::ZeroRotator);
+				HeadBobbingData.WalkCameraShake, 1.0f, ECameraShakePlaySpace::CameraLocal, FRotator::ZeroRotator);
 			}
 		} else {
 			// SPRINT
-			if(IsValid(SprintCameraShake))
+			if(IsValid(HeadBobbingData.SprintCameraShake))
 			{
 				ControllerRef->ClientStartCameraShake(
-				SprintCameraShake, 1.0f, ECameraShakePlaySpace::CameraLocal, FRotator::ZeroRotator);
+				HeadBobbingData.SprintCameraShake, 1.0f, ECameraShakePlaySpace::CameraLocal, FRotator::ZeroRotator);
 			}
 		}
 	} else {
 		// IDLE
-		if(IsValid(IDLECameraShake)) {
+		if(IsValid(HeadBobbingData.IDLECameraShake)) {
 			ControllerRef->ClientStartCameraShake(
-			IDLECameraShake, 1.0f, ECameraShakePlaySpace::CameraLocal, FRotator::ZeroRotator);
+			HeadBobbingData.IDLECameraShake, 1.0f, ECameraShakePlaySpace::CameraLocal, FRotator::ZeroRotator);
 		}
+	}
+}
+
+/**
+ * @brief Interact with the elements in the environment by calling interfaces.
+ */
+void ABFPPlayerCharacter::Interact(const FInputActionValue& Value)
+{
+	if(!bCanInteract) { return; }
+	
+	FHitResult OutHitData;
+	FVector StartPoint = GetFirstPersonCameraComponent()->GetComponentLocation();
+	FVector EndPoint = StartPoint + (GetFirstPersonCameraComponent()->GetForwardVector() * InteractReach);
+	ActorLineTraceSingle(OutHitData, StartPoint, EndPoint, ECC_Visibility, FCollisionQueryParams());
+	if(OutHitData.bBlockingHit)
+	{
+		// TODO: Call the interact method from the interface
+		// if(OutHitData.GetActor()->GetClass()->ImplementsInterface(UInteractable::StaticClass()))
+		// {
+		// 	IInteractable::Execute_Interact(OutHitData.GetActor());
+		// }
 	}
 }
 
@@ -117,7 +144,7 @@ void ABFPPlayerCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	if(bChangeFocus){ ChangeFocus(); }
-	if(bUseHeadBobbing){ InitializeHeadBoobing(); }
+	if(HeadBobbingData.bUseHeadBobbing){ InitializeHeadBoobing(); }
 }
 
 void ABFPPlayerCharacter::Move(const FInputActionValue& Value)
@@ -157,5 +184,15 @@ void ABFPPlayerCharacter::StopSprint(const FInputActionValue& Value)
 {
 	CurrentPlayerState = EPlayerState::Idle;
 	GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
+}
+
+void ABFPPlayerCharacter::LeanRight(const FInputActionValue& Value)
+{
+	
+}
+
+void ABFPPlayerCharacter::LeanLeft(const FInputActionValue& Value)
+{
+	
 }
 
