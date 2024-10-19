@@ -61,11 +61,11 @@ struct Z_Construct_UFunction_ABFPPlayerCharacter_GetFirstPersonCameraComponent_S
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// ***** GETTERS ***** //\n// Returns FirstPersonCameraComponent subobject\n" },
+		{ "Comment", "// ***** GETTERS ***** //\n" },
 #endif
 		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "***** GETTERS *****\nReturns FirstPersonCameraComponent subobject" },
+		{ "ToolTip", "***** GETTERS *****" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[] = {
@@ -248,63 +248,6 @@ struct Z_Construct_UClass_ABFPPlayerCharacter_Statics
 		{ "ToolTip", "Look Input Action" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FlashlightAction_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Default Input" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Sprint Input Action\n" },
-#endif
-		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Sprint Input Action" },
-#endif
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ToggleRotationInput_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "InspectItem Input" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// BEGIN - InspectItem input actions\n" },
-#endif
-		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "BEGIN - InspectItem input actions" },
-#endif
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RotateItemHorizontalInput_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "InspectItem Input" },
-		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RotateItemVerticalInput_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "InspectItem Input" },
-		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemScaleUpInput_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "InspectItem Input" },
-		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemScaleDownInput_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "InspectItem Input" },
-		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ResetItemTransformsInput_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "InspectItem Input" },
-		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ToggleReadingInput_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "InspectItem Input" },
-		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CloseInteractionInput_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "InspectItem Input" },
-		{ "ModuleRelativePath", "Public/Character/BFPPlayerCharacter.h" },
-	};
 #endif // WITH_METADATA
 	static void NewProp_bChangeFocus_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bChangeFocus;
@@ -320,20 +263,11 @@ struct Z_Construct_UClass_ABFPPlayerCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SprintAction;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_FlashlightAction;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ToggleRotationInput;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_RotateItemHorizontalInput;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_RotateItemVerticalInput;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ItemScaleUpInput;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ItemScaleDownInput;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ResetItemTransformsInput;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_ToggleReadingInput;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_CloseInteractionInput;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ABFPPlayerCharacter_ChangeFocus, "ChangeFocus" }, // 2676425493
-		{ &Z_Construct_UFunction_ABFPPlayerCharacter_GetFirstPersonCameraComponent, "GetFirstPersonCameraComponent" }, // 1098699101
+		{ &Z_Construct_UFunction_ABFPPlayerCharacter_GetFirstPersonCameraComponent, "GetFirstPersonCameraComponent" }, // 3922201572
 		{ &Z_Construct_UFunction_ABFPPlayerCharacter_InitializeHeadBoobing, "InitializeHeadBoobing" }, // 3285260693
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -362,15 +296,6 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerChar
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_SprintAction = { "SprintAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, SprintAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SprintAction_MetaData), NewProp_SprintAction_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_FlashlightAction = { "FlashlightAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, FlashlightAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FlashlightAction_MetaData), NewProp_FlashlightAction_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_ToggleRotationInput = { "ToggleRotationInput", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, ToggleRotationInput), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ToggleRotationInput_MetaData), NewProp_ToggleRotationInput_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_RotateItemHorizontalInput = { "RotateItemHorizontalInput", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, RotateItemHorizontalInput), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotateItemHorizontalInput_MetaData), NewProp_RotateItemHorizontalInput_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_RotateItemVerticalInput = { "RotateItemVerticalInput", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, RotateItemVerticalInput), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotateItemVerticalInput_MetaData), NewProp_RotateItemVerticalInput_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_ItemScaleUpInput = { "ItemScaleUpInput", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, ItemScaleUpInput), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemScaleUpInput_MetaData), NewProp_ItemScaleUpInput_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_ItemScaleDownInput = { "ItemScaleDownInput", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, ItemScaleDownInput), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemScaleDownInput_MetaData), NewProp_ItemScaleDownInput_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_ResetItemTransformsInput = { "ResetItemTransformsInput", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, ResetItemTransformsInput), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ResetItemTransformsInput_MetaData), NewProp_ResetItemTransformsInput_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_ToggleReadingInput = { "ToggleReadingInput", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, ToggleReadingInput), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ToggleReadingInput_MetaData), NewProp_ToggleReadingInput_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_CloseInteractionInput = { "CloseInteractionInput", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABFPPlayerCharacter, CloseInteractionInput), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CloseInteractionInput_MetaData), NewProp_CloseInteractionInput_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABFPPlayerCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_bChangeFocus,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_IDLECameraShake,
@@ -384,15 +309,6 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABFPPlaye
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_MoveAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_LookAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_SprintAction,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_FlashlightAction,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_ToggleRotationInput,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_RotateItemHorizontalInput,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_RotateItemVerticalInput,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_ItemScaleUpInput,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_ItemScaleDownInput,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_ResetItemTransformsInput,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_ToggleReadingInput,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABFPPlayerCharacter_Statics::NewProp_CloseInteractionInput,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABFPPlayerCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABFPPlayerCharacter_Statics::DependentSingletons[])() = {
@@ -435,10 +351,10 @@ ABFPPlayerCharacter::~ABFPPlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_Duarte_Desktop_FPTemplate_Plugins_DMV_BetterFPChar_ue5Plugin_Source_BetterFirstPersonCharacter_Public_Character_BFPPlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABFPPlayerCharacter, ABFPPlayerCharacter::StaticClass, TEXT("ABFPPlayerCharacter"), &Z_Registration_Info_UClass_ABFPPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABFPPlayerCharacter), 1670747892U) },
+		{ Z_Construct_UClass_ABFPPlayerCharacter, ABFPPlayerCharacter::StaticClass, TEXT("ABFPPlayerCharacter"), &Z_Registration_Info_UClass_ABFPPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABFPPlayerCharacter), 2145619159U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Duarte_Desktop_FPTemplate_Plugins_DMV_BetterFPChar_ue5Plugin_Source_BetterFirstPersonCharacter_Public_Character_BFPPlayerCharacter_h_3552867415(TEXT("/Script/BetterFirstPersonCharacter"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Duarte_Desktop_FPTemplate_Plugins_DMV_BetterFPChar_ue5Plugin_Source_BetterFirstPersonCharacter_Public_Character_BFPPlayerCharacter_h_3635068486(TEXT("/Script/BetterFirstPersonCharacter"),
 	Z_CompiledInDeferFile_FID_Users_Duarte_Desktop_FPTemplate_Plugins_DMV_BetterFPChar_ue5Plugin_Source_BetterFirstPersonCharacter_Public_Character_BFPPlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Duarte_Desktop_FPTemplate_Plugins_DMV_BetterFPChar_ue5Plugin_Source_BetterFirstPersonCharacter_Public_Character_BFPPlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

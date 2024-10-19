@@ -28,29 +28,6 @@ ABFPPlayerCharacter::ABFPPlayerCharacter()
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(GetMesh(), FName(TEXT("HeadSocket")));
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
-
-	FlashlightSpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("FlashlightSpringArm"));
-	FlashlightSpringArm->SetupAttachment(GetCapsuleComponent());
-	FlashlightSpotLight = CreateDefaultSubobject<USpotLightComponent>(TEXT("FlashlightSpotLight"));
-	FlashlightSpotLight->SetupAttachment(FlashlightSpringArm);
-	FlashlightSpringArm->TargetArmLength = 0.0f;
-	FlashlightSpringArm->bUsePawnControlRotation = true;
-	FlashlightSpringArm->SetWorldLocation(FVector(0.0f, 20.0f, 40.0f));
-	FlashlightSpringArm->bEnableCameraRotationLag = true;
-}
-
-void ABFPPlayerCharacter::ToggleFlashlight(const FInputActionValue& Value)
-{
-	if (bFlashLightOn)
-	{
-		FlashlightSpringArm->SetVisibility(false, true);
-		bFlashLightOn = false;
-	}
-	else
-	{
-		FlashlightSpringArm->SetVisibility(true, true);
-		bFlashLightOn = true;
-	}
 }
 
 void ABFPPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -70,8 +47,6 @@ void ABFPPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		// Sprinting
 		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Triggered, this, &ABFPPlayerCharacter::StartSprint);
 		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &ABFPPlayerCharacter::StopSprint);
-		// Flashlight
-		EnhancedInputComponent->BindAction(FlashlightAction, ETriggerEvent::Started, this, &ABFPPlayerCharacter::ToggleFlashlight);
 	}
 	else
 	{

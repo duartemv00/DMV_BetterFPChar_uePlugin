@@ -7,10 +7,12 @@
 			"BFPPlayerCharacter.gen.cpp.obj",
 			"BFPPlayerController.gen.cpp.obj",
 			"DMV_FootstepSoundAN.gen.cpp.obj",
+			"FlashlightComponent.gen.cpp.obj",
 			"DMV_FootstepSoundAN.cpp.obj",
 			"BetterFirstPersonCharacter.cpp.obj",
 			"BFPCharacter.cpp.obj",
 			"BFPPlayerCharacter.cpp.obj",
+			"FlashlightComponent.cpp.obj",
 			"BFPPlayerController.cpp.obj"
 		]
 	}

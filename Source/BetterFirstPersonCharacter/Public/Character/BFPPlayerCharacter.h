@@ -15,13 +15,8 @@ public:
 	ABFPPlayerCharacter();
 
 	// ***** GETTERS ***** //
-	// Returns FirstPersonCameraComponent subobject
 	UFUNCTION(BlueprintPure)
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
-	// UFUNCTION(BlueprintCallable, Category = "Player features")
-	// bool GetUseHeadBobbing() const { return bUseHeadBobbing; }
-	// UFUNCTION(BlueprintCallable, Category = "Player features")
-	// bool GetUseFocusChange() const { return bChangeFocus; }
 
 protected:
 	virtual void BeginPlay() override;
@@ -36,8 +31,6 @@ protected:
 	void StartSprint(const FInputActionValue& Value);
 	// Called for sprinting input
 	void StopSprint(const FInputActionValue& Value);
-	// Called for flashlight input
-	void ToggleFlashlight(const FInputActionValue& Value);
 	
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 
@@ -80,27 +73,5 @@ private:
 	UInputAction* LookAction; // Look Input Action
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Default Input", meta=(AllowPrivateAccess = "true"))
 	UInputAction* SprintAction; // Sprint Input Action
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Default Input", meta=(AllowPrivateAccess = "true"))
-	UInputAction* FlashlightAction; // Flashlight Input Action
 	// END - Default Input Actions
-
-	// BEGIN - InspectItem input actions
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "InspectItem Input", meta=(AllowPrivateAccess = "true"))
-	UInputAction* ToggleRotationInput;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "InspectItem Input", meta=(AllowPrivateAccess = "true"))
-	UInputAction* RotateItemHorizontalInput;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "InspectItem Input", meta=(AllowPrivateAccess = "true"))
-	UInputAction* RotateItemVerticalInput;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "InspectItem Input", meta=(AllowPrivateAccess = "true"))
-	UInputAction* ItemScaleUpInput;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "InspectItem Input", meta=(AllowPrivateAccess = "true"))
-	UInputAction* ItemScaleDownInput;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "InspectItem Input", meta=(AllowPrivateAccess = "true"))
-	UInputAction* ResetItemTransformsInput;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "InspectItem Input", meta=(AllowPrivateAccess = "true"))
-	UInputAction* ToggleReadingInput;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "InspectItem Input", meta=(AllowPrivateAccess = "true"))
-	UInputAction* CloseInteractionInput;
-	// END - InspectItem input actions
-	
 };

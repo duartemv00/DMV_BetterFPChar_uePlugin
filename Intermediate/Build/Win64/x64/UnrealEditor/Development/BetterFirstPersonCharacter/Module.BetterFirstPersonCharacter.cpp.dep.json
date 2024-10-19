@@ -26,7 +26,22 @@
             "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\bfpplayercontroller.generated.h",
             "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\dmv_footstepsoundan.gen.cpp",
             "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\source\\betterfirstpersoncharacter\\public\\animation\\dmv_footstepsoundan.h",
-            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\dmv_footstepsoundan.generated.h"
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\dmv_footstepsoundan.generated.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\flashlightcomponent.gen.cpp",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\source\\betterfirstpersoncharacter\\public\\flashlightcomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\spotlightcomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\pointlightcomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\locallightcomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\lightcomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\lightcomponentbase.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\lightcomponentbase.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\lightcomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\locallightcomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\pointlightcomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\spotlightcomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\springarmcomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\springarmcomponent.generated.h",
+            "c:\\users\\duarte\\desktop\\fptemplate\\plugins\\dmv_betterfpchar_ue5plugin\\intermediate\\build\\win64\\unrealeditor\\inc\\betterfirstpersoncharacter\\uht\\flashlightcomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

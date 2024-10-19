@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeBetterFirstPersonCharacter_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x5FB8AEE7,
-				0x139766E9,
+				0x9AAC9053,
+				0xBC101014,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_BetterFirstPersonCharacter.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_BetterFirstPersonCharacter.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_BetterFirstPersonCharacter(Z_Construct_UPackage__Script_BetterFirstPersonCharacter, TEXT("/Script/BetterFirstPersonCharacter"), Z_Registration_Info_UPackage__Script_BetterFirstPersonCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x5FB8AEE7, 0x139766E9));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_BetterFirstPersonCharacter(Z_Construct_UPackage__Script_BetterFirstPersonCharacter, TEXT("/Script/BetterFirstPersonCharacter"), Z_Registration_Info_UPackage__Script_BetterFirstPersonCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x9AAC9053, 0xBC101014));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
