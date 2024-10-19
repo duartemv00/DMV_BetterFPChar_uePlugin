@@ -6,85 +6,93 @@
 #include "BFPCharacter.h"
 #include "BFPPlayerCharacter.generated.h"
 
+USTRUCT(BlueprintType)
+struct FHeadBobbing
+{
+	GENERATED_BODY()
+	
+	UPROPERTY(EditAnywhere)
+	bool bUseHeadBobbing = false;
+	
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UCameraShakeBase> IDLECameraShake = nullptr;
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UCameraShakeBase> WalkCameraShake = nullptr;
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UCameraShakeBase> SprintCameraShake = nullptr;
+};
+
 UCLASS()
 class BETTERFIRSTPERSONCHARACTER_API ABFPPlayerCharacter : public ABFPCharacter
 {
 	GENERATED_BODY()
 
+	// BEGIN - Components
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	UCameraComponent* FirstPersonCameraComponent;
+	// END - Components
+
 public:
 	ABFPPlayerCharacter();
 
-	// ***** GETTERS ***** //
-	// Returns FirstPersonCameraComponent subobject
+	// BEGIN - Getters
 	UFUNCTION(BlueprintPure)
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
-	// UFUNCTION(BlueprintCallable, Category = "Player features")
-	// bool GetUseHeadBobbing() const { return bUseHeadBobbing; }
-	// UFUNCTION(BlueprintCallable, Category = "Player features")
-	// bool GetUseFocusChange() const { return bChangeFocus; }
+	// END - Getters
 
 protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 
-	// ***** INPUT ACTION EVENTS ***** //
-	// Called for movement input
-	void Move(const FInputActionValue& Value);
-	// Called for looking input
-	void Look(const FInputActionValue& Value);
-	// Called for sprinting input
-	void StartSprint(const FInputActionValue& Value);
-	// Called for sprinting input
-	void StopSprint(const FInputActionValue& Value);
-	// Called for flashlight input
-	void ToggleFlashlight(const FInputActionValue& Value);
+	// BEGIN - Input Action Implementation (Protected)
+	void Move(const FInputActionValue& Value); // Called for movement input
+	void Look(const FInputActionValue& Value); // Called for looking input
+	void StartSprint(const FInputActionValue& Value); // Called for sprinting input
+	void StopSprint(const FInputActionValue& Value); // Called for sprinting input
+	void LeanRight(const FInputActionValue& Value); // Called for sprinting input
+	void LeanLeft(const FInputActionValue& Value); // Called for sprinting input
 	
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
+	// END - Input Action Implementation (Protected)
 
-	UPROPERTY(EditDefaultsOnly, Category = "Player features")
+	// BEGIN - Dynamic Change Focus
+	UPROPERTY(EditDefaultsOnly, Category = "Player features1|ChangeFocus")
 	bool bChangeFocus = false;
 	UFUNCTION()
 	void ChangeFocus();
+	// END - Dynamic Change Focus
 
-	UPROPERTY(EditDefaultsOnly, Category = "Player features")
-	TSubclassOf<UCameraShakeBase> IDLECameraShake;
-	UPROPERTY(EditDefaultsOnly, Category = "Player features")
-	TSubclassOf<UCameraShakeBase> WalkCameraShake;
-	UPROPERTY(EditDefaultsOnly, Category = "Player features")
-	TSubclassOf<UCameraShakeBase> SprintCameraShake;
-	UPROPERTY(EditDefaultsOnly, Category = "Player features")
-	bool bUseHeadBobbing = false;
+	// BEGIN - Head Bobbing
+	UPROPERTY(EditDefaultsOnly, Category = "Player features|HeadBobbing")
+	FHeadBobbing HeadBobbingData;
 	UFUNCTION()
 	void InitializeHeadBoobing();
+	// END - Head Bobbing
+
+	// BEGIN - Interact with objects
+	UPROPERTY(EditDefaultsOnly, Category = "Player features|Interact")
+	bool bCanInteract = false;
+	UPROPERTY(EditDefaultsOnly, Category = "Player features|Interact")
+	float InteractReach;
+	UFUNCTION()
+	void Interact(const FInputActionValue& Value);
+	// END - Interact with objects
 
 private:
-
-	// First person camera
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	UCameraComponent* FirstPersonCameraComponent;
-
-	bool bFlashLightOn = false;
-
-	// Flashlight
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Flashlight, meta = (AllowPrivateAccess = "true"))
-	USpringArmComponent* FlashlightSpringArm;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Flashlight, meta = (AllowPrivateAccess = "true"))
-	USpotLightComponent* FlashlightSpotLight;
-
-	// ***** INPUT ACTIONS ***** //
-	// Jump Input Action
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
-	UInputAction* JumpAction;
-	// Move Input Action
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
-	UInputAction* MoveAction;
-	/** Look Input Action */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	class UInputAction* LookAction;
-	// Sprint Input Action
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
-	UInputAction* SprintAction;
-	// Flashlight Input Action
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
-	UInputAction* FlashlightAction;
+	// BEGIN - Input Action Implementation (Private)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "Default Input", meta=(AllowPrivateAccess = "true"))
+	UInputAction* JumpAction; // Jump Input Action
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "Default Input", meta=(AllowPrivateAccess = "true"))
+	UInputAction* MoveAction; // Move Input Action
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Default Input", meta = (AllowPrivateAccess = "true"))
+	UInputAction* LookAction; // Look Input Action
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Default Input", meta=(AllowPrivateAccess = "true"))
+	UInputAction* SprintAction; // Sprint Input Action
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Default Input", meta=(AllowPrivateAccess = "true"))
+	UInputAction* InteractAction; // Interact Input Action
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Default Input", meta=(AllowPrivateAccess = "true"))
+	UInputAction* LeanRightAction; // Lean Right Input Action
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Default Input", meta=(AllowPrivateAccess = "true"))
+	UInputAction* LeanLeftAction; // Lean Left Input Action
+	// END - Input Action Implementation (Private)
 };

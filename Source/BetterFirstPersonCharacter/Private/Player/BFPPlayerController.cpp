@@ -15,14 +15,5 @@ void ABFPPlayerController::BeginPlay()
 	{
 		// add the mapping context so we get controls
 		Subsystem->AddMappingContext(InputMappingContext, 0);
-
-		// if(IsValid(PlayerHUDClass))
-		// {
-		// 	PlayerHUD = CreateWidget<UUserWidget>(this, PlayerHUDClass, "PlayerHUD");
-		// 	if(IsValid(PlayerHUD))
-		// 	{
-		// 		PlayerHUD->AddToViewport();
-		// 	}
-		// }
 	}
 }
