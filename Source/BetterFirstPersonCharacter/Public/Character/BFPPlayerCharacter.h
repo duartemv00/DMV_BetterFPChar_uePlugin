@@ -51,6 +51,7 @@ protected:
 	void StopSprint(const FInputActionValue& Value); // Called for sprinting input
 	void LeanRight(const FInputActionValue& Value); // Called for sprinting input
 	void LeanLeft(const FInputActionValue& Value); // Called for sprinting input
+	void Interact(const FInputActionValue& Value); // Called for interacting with ambient elements.
 	
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 	// END - Input Action Implementation (Protected)
@@ -69,14 +70,12 @@ protected:
 	void InitializeHeadBoobing();
 	// END - Head Bobbing
 
-	// BEGIN - Interact with objects
+	// BEGIN - Interact properties
 	UPROPERTY(EditDefaultsOnly, Category = "Player features|Interact")
 	bool bCanInteract = false;
 	UPROPERTY(EditDefaultsOnly, Category = "Player features|Interact")
 	float InteractReach;
-	UFUNCTION()
-	void Interact(const FInputActionValue& Value);
-	// END - Interact with objects
+	// END - Interact properties
 
 private:
 	// BEGIN - Input Action Implementation (Private)
